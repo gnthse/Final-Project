@@ -1,0 +1,61 @@
+/*
+* Mobile            <768px
+* fixture               sm
+* columns               12
+* gutter                8px
+* margin                15px
+* container-size
+* Desktop           >=768px
+* fixture               lg
+* columns               12
+* gutter                30px
+* margin                auto
+* unit                  50px
+* container-size        
+* max-container         960px
+*/
+
+$sm-column: 4;
+$sm-gutter: 8px;
+$sm-margin: 15px;
+
+$lg-column: 12;
+$lg-gutter: 30px;
+$lg-unit: 50px;
+$lg-max-container: ($lg-unit + $lg-gutter) * $lg-column;
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $sm-margin;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  [class^='col-'] {
+    padding: 0 $sm-gutter / 2;
+  }
+
+  @for $i from 1 through $sm-column {
+    .col-sm-#{$i} {
+      width: percentage($i / $sm-column);
+    }
+  }
+
+  @include responsive(D) {
+    max-width: $lg-max-container;
+    padding: 0;
+
+    [class^='col-'] {
+      padding: 0 $lg-gutter / 2;
+    }
+
+    @for $i from 1 through $lg-column {
+      .col-lg-#{$i} {
+        width: percentage($i / $lg-column);
+      }
+    }
+  }
+}
