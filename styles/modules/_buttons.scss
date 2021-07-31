@@ -1,0 +1,28 @@
+@mixin btn-base($color: $white, $bg-color: $point) {
+  @if (type-of($color) == color and type-of($bg-color) == color) {
+    @include flexbox;
+    color: $color;
+    background-color: $bg-color;
+    border-radius: 2px;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.btn {
+  @include btn-base;
+}
+
+.btn-white {
+  @include btn-base($point, $white);
+}
+
+.btn-48 {
+  @include text-style-sm(btn);
+  width: 100%;
+  height: 48px;
+  max-width: 140px;
+}
