@@ -1,0 +1,32 @@
+.footer {
+  padding: 24px 0;
+
+  li {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #807f81;
+  }
+
+  @include responsive(D) {
+    ul {
+      @include flexbox(start);
+    }
+    li {
+      margin-right: 16px;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
