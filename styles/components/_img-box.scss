@@ -1,0 +1,27 @@
+.img-box {
+  @include column-flexbox;
+  width: 290px;
+  padding-top: 24px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(58, 57, 57, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    color: $white;
+    background-color: $point;
+  }
+
+  img {
+    display: block;
+    width: auto;
+    height: 195px;
+    margin-bottom: 16px;
+  }
+
+  strong {
+    @include text-style-sm(18);
+    margin-bottom: 32px;
+    font-weight: 700;
+  }
+}
