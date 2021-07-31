@@ -1,0 +1,53 @@
+.landing {
+  background-color: #fdded8;
+
+  .landing-wrapper {
+    @include column-flexbox;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .title {
+    @include text-style-sm(h1);
+    margin-bottom: 24px;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+  }
+
+  .btn-group {
+    @include flexbox();
+    width: 100%;
+
+    .btn:first-child {
+      margin-right: 8px;
+    }
+  }
+
+  @include responsive(D) {
+    .landing-wrapper {
+      height: auto;
+      padding: 120px 0;
+    }
+
+    .title {
+      font-size: 70px;
+      line-height: 72px;
+      letter-spacing: -0.05em;
+    }
+
+    span {
+      @include text-style-lg(22);
+    }
+    .btn-48 {
+      @include text-style-lg(btn);
+      height: 56px;
+      max-width: 160px;
+    }
+  }
+}
