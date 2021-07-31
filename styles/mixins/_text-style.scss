@@ -1,0 +1,107 @@
+@mixin text-style-sm-h1 {
+  font-size: $font-size-sm-h1;
+  font-weight: 700;
+  line-height: $line-height-sm-h1;
+  letter-spacing: $letter-spacing-sm-h1;
+}
+
+@mixin text-style-sm-h2 {
+  font-size: $font-size-sm-h2;
+  font-weight: 700;
+  line-height: $line-height-sm-h2;
+  letter-spacing: $letter-spacing-sm-h2;
+}
+
+@mixin text-style-sm-h3 {
+  font-size: $font-size-sm-h3;
+  font-weight: 700;
+  line-height: $line-height-sm-h3;
+  letter-spacing: $letter-spacing-sm-h3;
+}
+
+@mixin text-style-sm-18 {
+  font-size: $font-size-sm-18;
+  font-weight: 700;
+  line-height: $line-height-sm-18;
+  letter-spacing: $letter-spacing-sm-18;
+}
+
+@mixin text-style-sm-16 {
+  font-size: $font-size-sm-16;
+  line-height: $line-height-sm-16;
+  letter-spacing: $letter-spacing-sm-16;
+}
+
+@mixin text-style-sm-15 {
+  font-size: $font-size-sm-15;
+  line-height: $line-height-sm-15;
+  letter-spacing: $letter-spacing-sm-15;
+}
+
+@mixin text-style-sm-btn {
+  font-size: $font-size-sm-btn;
+  font-weight: 700;
+  line-height: $line-height-sm-btn;
+  letter-spacing: $letter-spacing-sm-btn;
+}
+
+@mixin text-style-sm($size, $color: false) {
+  @if ($size == 'h1') {
+    @include text-style-sm-h1();
+  }
+  @if ($size == 'h2') {
+    @include text-style-sm-h2();
+  }
+  @if ($size == 'h3') {
+    @include text-style-sm-h3();
+  }
+  @if ($size == 18) {
+    @include text-style-sm-18();
+  }
+  @if ($size == 16) {
+    @include text-style-sm-16();
+  }
+  @if ($size == 15) {
+    @include text-style-sm-15();
+  }
+  @if ($size == 'btn') {
+    @include text-style-sm-btn();
+  }
+  @if (type-of($color) == color) {
+    color: $color;
+  }
+}
+
+@mixin text-style-lg-26 {
+  font-size: $font-size-lg-26;
+  line-height: $line-height-lg-26;
+  letter-spacing: $letter-spacing-lg-26;
+}
+
+@mixin text-style-lg-22 {
+  font-size: $font-size-lg-22;
+  line-height: $line-height-lg-22;
+  letter-spacing: $letter-spacing-lg-22;
+}
+
+@mixin text-style-lg-btn {
+  font-size: $font-size-lg-btn;
+  font-weight: 700;
+  line-height: $line-height-lg-btn;
+  letter-spacing: $letter-spacing-lg-btn;
+}
+
+@mixin text-style-lg($size, $color: false) {
+  @if ($size == 22) {
+    @include text-style-lg-22();
+  }
+  @if ($size == 26) {
+    @include text-style-lg-26();
+  }
+  @if ($size == 'btn') {
+    @include text-style-lg-btn();
+  }
+  @if (type-of($color) == color) {
+    color: $color;
+  }
+}
