@@ -1,0 +1,70 @@
+.program {
+  padding: 80px 0;
+
+  .sub-title {
+    @include text-style-sm(16, #009b4d);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  h2 {
+    @include text-style-sm(h2);
+    margin-bottom: 24px;
+  }
+
+  p {
+    @include text-style-sm(16);
+  }
+
+  .row:first-child {
+    margin-bottom: 32px;
+  }
+
+  .row:last-child .col-sm-4 {
+    display: flex;
+  }
+
+  .img-box {
+    margin-bottom: 20px;
+  }
+
+  @include responsive(D) {
+    padding: 80px 0 96px;
+    text-align: center;
+
+    .sub-title {
+      @include text-style-lg(22);
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin-bottom: 32px;
+      font-size: 56px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      @include text-style-lg(22);
+    }
+
+    .row:first-child {
+      margin-bottom: 72px;
+    }
+
+    .img-box {
+      margin-bottom: 0;
+
+      img {
+        margin-bottom: 24px;
+      }
+
+      strong {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+}
